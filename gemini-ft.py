@@ -14,7 +14,6 @@ ENDPOINT_ID = '5207080360961114112'
 
 def init_vertexai():
     credentials_json = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS_JSON')
-    print(credentials_json)
     if credentials_json:
         credentials_dict = json.loads(credentials_json)
         credentials = service_account.Credentials.from_service_account_info(credentials_dict)
