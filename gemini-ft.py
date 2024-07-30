@@ -13,7 +13,7 @@ LOCATION = 'asia-south1'
 ENDPOINT_ID = '5207080360961114112'
 
 def init_vertexai():
-    credentials_json = os.getenv('GOOGLE_APPLICATION_CREDENTIALS_JSON')
+    credentials_json = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS_JSON')
     print(credentials_json)
     if credentials_json:
         credentials_dict = json.loads(credentials_json)
